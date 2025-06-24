@@ -1,6 +1,7 @@
 
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,20 +11,22 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-white">InfraTech Solutions</h1>
+            <Link to="/" className="text-xl font-bold text-white hover:text-cyan-400 transition-colors">
+              InfraTech Solutions
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-slate-300 hover:text-cyan-400 transition-colors">Services</a>
-            <a href="#about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
-            <a href="#contact" className="text-slate-300 hover:text-cyan-400 transition-colors">Contact</a>
+            <Link to="/services" className="text-slate-300 hover:text-cyan-400 transition-colors">Services</Link>
+            <Link to="/about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</Link>
+            <Link to="/contact" className="text-slate-300 hover:text-cyan-400 transition-colors">Contact</Link>
           </nav>
 
           <div className="hidden md:flex">
-            <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg transition-colors">
+            <Link to="/contact" className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg transition-colors">
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -41,12 +44,34 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-slate-800">
             <nav className="flex flex-col space-y-4">
-              <a href="#services" className="text-slate-300 hover:text-cyan-400 transition-colors">Services</a>
-              <a href="#about" className="text-slate-300 hover:text-cyan-400 transition-colors">About</a>
-              <a href="#contact" className="text-slate-300 hover:text-cyan-400 transition-colors">Contact</a>
-              <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg transition-colors w-fit">
+              <Link 
+                to="/services" 
+                className="text-slate-300 hover:text-cyan-400 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/about" 
+                className="text-slate-300 hover:text-cyan-400 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link 
+                to="/contact" 
+                className="text-slate-300 hover:text-cyan-400 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <Link 
+                to="/contact" 
+                className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg transition-colors w-fit"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Get Started
-              </button>
+              </Link>
             </nav>
           </div>
         )}

@@ -1,5 +1,6 @@
 
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -16,13 +17,13 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2 text-slate-300">
-              <li><a href="#audit" className="hover:text-cyan-400 transition-colors">Infrastructure Audit</a></li>
-              <li><a href="#virtualization" className="hover:text-cyan-400 transition-colors">Virtualization</a></li>
-              <li><a href="#procurement" className="hover:text-cyan-400 transition-colors">Strategic Procurement</a></li>
+              <li><Link to="/services" className="hover:text-cyan-400 transition-colors">Infrastructure Audit</Link></li>
+              <li><Link to="/services" className="hover:text-cyan-400 transition-colors">Virtualization</Link></li>
+              <li><Link to="/services" className="hover:text-cyan-400 transition-colors">Strategic Procurement</Link></li>
             </ul>
           </div>
           
-          <div id="contact">
+          <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-slate-300">
@@ -31,11 +32,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-slate-300">
                 <Phone size={16} className="text-cyan-400" />
-                <span>+1 (555) 123-4567</span>
+                <span>+234 (0) 123 456 7890</span>
               </div>
               <div className="flex items-center gap-3 text-slate-300">
                 <MapPin size={16} className="text-cyan-400" />
-                <span>Available Globally</span>
+                <span>Lagos, Nigeria</span>
               </div>
             </div>
           </div>
