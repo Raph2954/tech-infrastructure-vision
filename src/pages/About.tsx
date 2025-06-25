@@ -1,3 +1,4 @@
+
 import { Shield, Users, Award, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -5,16 +6,16 @@ import Footer from '../components/Footer';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
-            About <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">InfraTech Solutions</span>
+            About <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">InfraTech Solutions</span>
           </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
+          <p className="text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
             We're infrastructure specialists who understand the unique challenges facing Nigerian businesses. 
             Our mission is simple: build IT systems that work reliably, scale affordably, and support your growth.
           </p>
@@ -22,10 +23,10 @@ const About = () => {
       </section>
 
       {/* Story Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">Our Story</h2>
-          <div className="text-lg text-slate-600 dark:text-slate-300 space-y-6">
+          <div className="text-lg text-slate-700 dark:text-slate-300 space-y-6">
             <p>
               InfraTech Solutions was founded with a clear vision: to provide Nigerian businesses with 
               world-class infrastructure expertise without the complexity and cost typically associated 
@@ -46,53 +47,53 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-100 dark:bg-slate-950">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="text-cyan-400" size={24} />
+              <div className="bg-cyan-100 dark:bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="text-cyan-600 dark:text-cyan-400" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Reliability First</h3>
-              <p className="text-slate-300">We build systems that work when you need them most, with proper redundancy and failover planning.</p>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Reliability First</h3>
+              <p className="text-slate-700 dark:text-slate-300">We build systems that work when you need them most, with proper redundancy and failover planning.</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="text-cyan-400" size={24} />
+              <div className="bg-cyan-100 dark:bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="text-cyan-600 dark:text-cyan-400" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Partnership</h3>
-              <p className="text-slate-300">We're not just vendors—we're partners in your success, providing ongoing support and strategic guidance.</p>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Partnership</h3>
+              <p className="text-slate-700 dark:text-slate-300">We're not just vendors—we're partners in your success, providing ongoing support and strategic guidance.</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="text-cyan-400" size={24} />
+              <div className="bg-cyan-100 dark:bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="text-cyan-600 dark:text-cyan-400" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Excellence</h3>
-              <p className="text-slate-300">Every project receives the same attention to detail, whether it's a small audit or large deployment.</p>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Excellence</h3>
+              <p className="text-slate-700 dark:text-slate-300">Every project receives the same attention to detail, whether it's a small audit or large deployment.</p>
             </div>
 
             <div className="text-center">
-              <div className="bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="text-cyan-400" size={24} />
+              <div className="bg-cyan-100 dark:bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="text-cyan-600 dark:text-cyan-400" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Efficiency</h3>
-              <p className="text-slate-300">We deliver maximum value with minimal complexity, focusing on solutions that actually solve problems.</p>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Efficiency</h3>
+              <p className="text-slate-700 dark:text-slate-300">We deliver maximum value with minimal complexity, focusing on solutions that actually solve problems.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Expertise Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Expertise</h2>
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">Our Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-white mb-4">Technologies We Work With</h3>
-              <ul className="text-slate-300 space-y-2">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">Technologies We Work With</h3>
+              <ul className="text-slate-700 dark:text-slate-300 space-y-2">
                 <li>• VMware vSphere & ESXi</li>
                 <li>• Proxmox Virtual Environment</li>
                 <li>• Linux & Windows Server environments</li>
@@ -102,8 +103,8 @@ const About = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-white mb-4">Industries We Serve</h3>
-              <ul className="text-slate-300 space-y-2">
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">Industries We Serve</h3>
+              <ul className="text-slate-700 dark:text-slate-300 space-y-2">
                 <li>• Small & Medium Enterprises</li>
                 <li>• Non-Governmental Organizations</li>
                 <li>• Technology Startups</li>
@@ -117,12 +118,12 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-cyan-900/20 dark:to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Ready to Work Together?
           </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8">
+          <p className="text-xl text-slate-700 dark:text-slate-300 mb-8">
             Let's discuss how we can help strengthen your infrastructure and support your business goals.
           </p>
           <Link 
