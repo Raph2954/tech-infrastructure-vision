@@ -1,4 +1,3 @@
-
 import { Server, Network, ShoppingCart, ArrowRight, Shield, Zap, Target, Search, Settings, FileText, Phone, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -18,7 +17,8 @@ const Index = () => {
         "A detailed infrastructure upgrade plan tailored to your business goals"
       ],
       idealFor: "Organizations running outdated or patched-together systems that need stability, performance, or clarity on next steps.",
-      icon: <Search size={24} />
+      icon: <Search size={24} />,
+      learnMoreLink: "/infrastructure-audit"
     },
     {
       title: "Virtualization Deployment & Optimization", 
@@ -31,7 +31,8 @@ const Index = () => {
         "Full documentation + training for internal staff"
       ],
       idealFor: "Small-to-medium organizations needing dependable IT infrastructure without hiring a full internal IT team.",
-      icon: <Settings size={24} />
+      icon: <Settings size={24} />,
+      learnMoreLink: "/virtualization-deployment"
     },
     {
       title: "Strategic Procurement & IT Advisory",
@@ -43,7 +44,8 @@ const Index = () => {
         "Licensing, renewal, and installation support"
       ],
       idealFor: "Organizations tired of buying hardware that breaks, lags, or gets replaced too soon—and want strategic input before they spend.",
-      icon: <Target size={24} />
+      icon: <Target size={24} />,
+      learnMoreLink: "/strategic-procurement"
     }
   ];
 
