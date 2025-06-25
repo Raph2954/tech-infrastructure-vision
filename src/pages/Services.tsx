@@ -1,5 +1,5 @@
-
 import { Search, Settings, Target } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ServiceCard from '../components/ServiceCard';
@@ -51,16 +51,16 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-white dark:bg-slate-950">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
             Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
           </h1>
-          <p className="text-xl text-slate-300 leading-relaxed">
+          <p className="text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
             Comprehensive infrastructure solutions designed to help your business grow reliably and efficiently.
           </p>
         </div>
@@ -83,30 +83,30 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Process</h2>
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center">Our Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-cyan-600/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-cyan-400 font-bold text-xl">1</span>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Discovery</h3>
-              <p className="text-slate-300">We start with a thorough understanding of your current environment, challenges, and goals.</p>
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Discovery</h3>
+              <p className="text-slate-600 dark:text-slate-300">We start with a thorough understanding of your current environment, challenges, and goals.</p>
             </div>
             <div className="text-center">
               <div className="bg-cyan-600/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-cyan-400 font-bold text-xl">2</span>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
-              <p className="text-slate-300">We create detailed plans and recommendations tailored to your specific needs and budget.</p>
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Design</h3>
+              <p className="text-slate-600 dark:text-slate-300">We create detailed plans and recommendations tailored to your specific needs and budget.</p>
             </div>
             <div className="text-center">
               <div className="bg-cyan-600/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-cyan-400 font-bold text-xl">3</span>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Delivery</h3>
-              <p className="text-slate-300">We implement solutions with minimal disruption and provide training for your team.</p>
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">Delivery</h3>
+              <p className="text-slate-600 dark:text-slate-300">We implement solutions with minimal disruption and provide training for your team.</p>
             </div>
           </div>
         </div>
@@ -115,15 +115,18 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-slate-300 mb-8">
+          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8">
             Schedule a free consultation to discuss your infrastructure needs and learn how we can help.
           </p>
-          <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+          <Link 
+            to="/contact" 
+            className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+          >
             Schedule Free Consultation
-          </button>
+          </Link>
         </div>
       </section>
 

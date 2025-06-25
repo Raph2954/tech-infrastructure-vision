@@ -1,5 +1,6 @@
 
 import { Server, Network, ShoppingCart, ArrowRight, Shield, Zap, Target, Search, Settings, FileText, Phone, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import ServiceCard from '../components/ServiceCard';
 import Footer from '../components/Footer';
@@ -47,39 +48,45 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-white dark:bg-slate-950">
       <Header />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
               Infrastructure
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> That Actually Works</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+            <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
               We provide expert infrastructure and IT solutions designed to help Nigerian businesses grow, 
               scale, and stay online—without unnecessary complexity or cost.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2">
+              <Link 
+                to="/contact" 
+                className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2"
+              >
                 Book Free Consultation <ArrowRight size={20} />
-              </button>
-              <button className="border border-slate-600 hover:border-cyan-400 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-                View Case Studies
-              </button>
+              </Link>
+              <Link 
+                to="/learn-more" 
+                className="border border-slate-300 dark:border-slate-600 hover:border-cyan-400 text-slate-900 dark:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+              >
+                Learn More
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Infrastructure Matters</h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Why Infrastructure Matters</h2>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Your infrastructure is the foundation of everything. When it's right, your business thrives. 
               When it's wrong, everything suffers.
             </p>
@@ -90,24 +97,24 @@ const Index = () => {
               <div className="bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="text-cyan-400" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Performance That Scales</h3>
-              <p className="text-slate-300">Infrastructure that grows with your business, not against it.</p>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Performance That Scales</h3>
+              <p className="text-slate-600 dark:text-slate-300">Infrastructure that grows with your business, not against it.</p>
             </div>
             
             <div className="text-center">
               <div className="bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="text-cyan-400" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Rock-Solid Security</h3>
-              <p className="text-slate-300">Protect your data and operations with proven security practices.</p>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Rock-Solid Security</h3>
+              <p className="text-slate-600 dark:text-slate-300">Protect your data and operations with proven security practices.</p>
             </div>
             
             <div className="text-center">
               <div className="bg-cyan-600/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="text-cyan-400" size={24} />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Smart Procurement</h3>
-              <p className="text-slate-300">Buy the right gear for your actual needs, not vendor recommendations.</p>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Smart Procurement</h3>
+              <p className="text-slate-600 dark:text-slate-300">Buy the right gear for your actual needs, not vendor recommendations.</p>
             </div>
           </div>
         </div>
@@ -171,35 +178,44 @@ const Index = () => {
       {/* Not Sure Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/20 to-cyan-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Not sure where to start?
           </h2>
-          <p className="text-xl text-slate-300 mb-8">
+          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8">
             Book a free 30-minute call. We'll review your current environment and recommend a simple next step—no hard sell, no obligation.
           </p>
-          <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2 mx-auto">
+          <Link 
+            to="/contact" 
+            className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2 mx-auto w-fit"
+          >
             <Calendar size={20} />
             Book a Free Call
-          </button>
+          </Link>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Ready to Fix Your Infrastructure?
           </h2>
-          <p className="text-xl text-slate-300 mb-8">
+          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8">
             Stop working around broken systems. Let's build infrastructure that actually supports your business goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            <Link 
+              to="/contact" 
+              className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+            >
               Schedule Free Consultation
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            </Link>
+            <Link 
+              to="/learn-more" 
+              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white dark:hover:text-slate-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+            >
               Download Infrastructure Guide
-            </button>
+            </Link>
           </div>
         </div>
       </section>
