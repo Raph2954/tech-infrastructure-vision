@@ -1,5 +1,6 @@
 
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ServiceCardProps {
   title: string;
@@ -8,9 +9,10 @@ interface ServiceCardProps {
   idealFor: string;
   className?: string;
   icon?: React.ReactNode;
+  learnMoreLink: string;
 }
 
-const ServiceCard = ({ title, summary, includes, idealFor, className = "", icon }: ServiceCardProps) => {
+const ServiceCard = ({ title, summary, includes, idealFor, className = "", icon, learnMoreLink }: ServiceCardProps) => {
   return (
     <div className={`bg-white dark:bg-slate-800/50 border-2 border-slate-200 dark:border-slate-700 rounded-xl p-6 sm:p-8 hover:bg-slate-50 dark:hover:bg-slate-800/70 transition-all duration-300 hover:border-cyan-500 dark:hover:border-cyan-500/50 hover:shadow-lg group ${className}`}>
       <div className="flex items-center gap-3 mb-4">
@@ -37,9 +39,12 @@ const ServiceCard = ({ title, summary, includes, idealFor, className = "", icon 
         <p className="text-slate-700 dark:text-slate-300 text-sm sm:text-base">{idealFor}</p>
       </div>
       
-      <button className="w-full bg-slate-200 hover:bg-cyan-600 dark:bg-slate-700 dark:hover:bg-cyan-600 text-slate-900 hover:text-white dark:text-white py-3 px-4 sm:px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 group-hover:bg-cyan-600 group-hover:text-white text-sm sm:text-base font-medium">
+      <Link 
+        to={learnMoreLink}
+        className="w-full bg-slate-200 hover:bg-cyan-600 dark:bg-slate-700 dark:hover:bg-cyan-600 text-slate-900 hover:text-white dark:text-white py-3 px-4 sm:px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2 group-hover:bg-cyan-600 group-hover:text-white text-sm sm:text-base font-medium"
+      >
         Learn More <ArrowRight size={16} className="flex-shrink-0" />
-      </button>
+      </Link>
     </div>
   );
 };
