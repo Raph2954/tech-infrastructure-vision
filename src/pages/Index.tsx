@@ -1,4 +1,3 @@
-
 import { Server, Network, ShoppingCart, ArrowRight, Shield, Zap, Target, Search, Settings, FileText, Phone, Calendar, Sparkles, Star, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -57,20 +56,10 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="flex justify-center mb-6 animate-fade-in-down">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <Star 
-                  key={index}
-                  className={`text-yellow-500 w-6 h-6 mx-1 animate-pulse-custom hover-scale animate-fade-in-up animate-stagger-${index + 1}`}
-                  fill="currentColor"
-                />
-              ))}
-            </div>
-            
+          <div className="text-center max-w-4xl mx-auto">            
             <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight animate-fade-in-up">
               Infrastructure
-              <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-text-glow"> That Actually Works</span>
+              <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-[text-glow_4s_ease-in-out_infinite]"> That Actually Works</span>
             </h1>
             
             <p className="text-xl text-slate-700 dark:text-slate-300 mb-8 leading-relaxed animate-fade-in-up animate-stagger-2">

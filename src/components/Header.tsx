@@ -1,5 +1,4 @@
-
-import { Menu, X, Home } from 'lucide-react';
+import { Menu, X, Home, Hexagon } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
@@ -13,8 +12,14 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center gap-4 animate-fade-in-left">
-            <Link to="/" className="text-xl font-bold text-slate-900 dark:text-white hover:text-transparent hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:bg-clip-text transition-all duration-300 hover-scale">
-              InfraTech Solutions
+            <Link to="/" className="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white hover:text-transparent hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:bg-clip-text transition-all duration-300 hover-scale">
+              <div className="relative">
+                <Hexagon className="w-8 h-8 text-cyan-600 dark:text-cyan-400" fill="currentColor" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-white dark:text-slate-900 font-bold text-xs">N</span>
+                </div>
+              </div>
+              Nexora Technologies
             </Link>
             {location.pathname !== '/' && (
               <Link 
