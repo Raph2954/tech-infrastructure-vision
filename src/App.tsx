@@ -8,6 +8,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import LearnMore from "./pages/LearnMore";
 import InfrastructureAudit from "./pages/InfrastructureAudit";
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/infrastructure-audit" element={<InfrastructureAudit />} />
             <Route path="/virtualization-deployment" element={<VirtualizationDeployment />} />
             <Route path="/strategic-procurement" element={<StrategicProcurement />} />

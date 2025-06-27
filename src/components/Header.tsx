@@ -37,6 +37,7 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8 animate-fade-in-down">
             {[
               { to: '/services', label: 'Services' },
+              { to: '/portfolio', label: 'Portfolio' },
               { to: '/about', label: 'About' },
               { to: '/learn-more', label: 'Learn More' },
               { to: '/contact', label: 'Contact' }
@@ -76,6 +77,7 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               {[
                 { to: '/services', label: 'Services' },
+                { to: '/portfolio', label: 'Portfolio' },
                 { to: '/about', label: 'About' },
                 { to: '/learn-more', label: 'Learn More' },
                 { to: '/contact', label: 'Contact' }
@@ -91,7 +93,7 @@ const Header = () => {
               ))}
               <Link 
                 to="/contact" 
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2 rounded-lg transition-all duration-300 w-fit hover-lift btn-ripple animate-fade-in-up animate-stagger-5"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2 rounded-lg transition-all duration-300 w-fit hover-lift btn-ripple animate-fade-in-up animate-stagger-6"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started

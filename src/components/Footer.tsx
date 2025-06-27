@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="animate-fade-in-left">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 text-gradient">
-              InfraTech Solutions
+              Nexora Technologies
             </h3>
             <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
               Your trusted partner for infrastructure audits, virtualization deployment, and strategic IT procurement.
@@ -45,9 +45,9 @@ const Footer = () => {
             </h4>
             <div className="space-y-4">
               {[
-                { icon: Mail, text: 'contact@infratechsolutions.com' },
-                { icon: Phone, text: '+234 (0) 123 456 7890' },
-                { icon: MapPin, text: 'Lagos, Nigeria' }
+                { icon: Mail, text: 'contact@nexoratech.com' },
+                { icon: Phone, text: '+234 (0) 809 123 4567' },
+                { icon: MapPin, text: 'Abuja, Nigeria' }
               ].map((contact, index) => (
                 <div 
                   key={index} 
@@ -65,7 +65,7 @@ const Footer = () => {
         
         <div className="border-t border-slate-200/50 dark:border-slate-800/50 mt-8 pt-8 text-center text-slate-500 dark:text-slate-400 animate-fade-in-up animate-stagger-6">
           <p className="hover:text-transparent hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:bg-clip-text transition-all duration-300 cursor-default">
-            &copy; 2024 InfraTech Solutions. All rights reserved.
+            &copy; 2024 Nexora Technologies. All rights reserved.
           </p>
           <div className="mt-4 flex justify-center space-x-4">
             {Array.from({ length: 5 }).map((_, index) => (
